@@ -1,0 +1,1 @@
+export default function RecentDeals({ deals }) { return <div className="card"><div className="card-head"><h3>Recent Deals</h3></div>{deals.slice(0,5).map(d=><div className="list-row" key={d.id}><div><b>{d.title}</b><small>{d.stage}</small></div><strong>₹{Number(d.amount||0).toLocaleString()}</strong></div>)}{!deals.length&&<div className="empty">No deals yet.</div>}</div>; }

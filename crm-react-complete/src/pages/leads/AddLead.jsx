@@ -1,0 +1,2 @@
+import{useNavigate,Link}from"react-router-dom";import LeadForm from"../../components/leads/LeadForm";import{leadService}from"../../services/leadService";import{useCRM}from"../../context/CRMContext";
+export default function AddLead(){const nav=useNavigate();const{refresh}=useCRM();return <div><div className="page-title"><div><h1>Add Lead</h1><p>Create a new prospect.</p></div><Link className="btn btn-light" to="/leads">Back</Link></div><div className="card"><LeadForm onSubmit={async f=>{await leadService.create(f);await refresh();nav("/leads")}}/></div></div>}

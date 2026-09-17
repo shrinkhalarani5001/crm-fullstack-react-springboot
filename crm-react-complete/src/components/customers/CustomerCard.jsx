@@ -1,0 +1,1 @@
+export default function CustomerCard({ customer }) { return <div className="card"><div className="avatar large">{customer.name?.charAt(0)}</div><h3>{customer.name}</h3><p>{customer.company}</p><p>{customer.email}</p><span className="badge">{customer.status}</span></div>; }
